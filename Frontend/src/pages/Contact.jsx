@@ -3,8 +3,7 @@ import Teatimonils from "../components/Teatimonils";
 import cont from "../assets/contact.png";
 import axios from "axios";
 import { useState  } from "react";
- import { useNavigate } from 'react-router-dom'
-
+ 
 
 const Contact = () => {
 
@@ -28,8 +27,7 @@ axios.post("https://apple-academy-1.vercel.app/contact", {name,lastName,address,
         }
 ).then(result => {
   console.log(result);
-   navigate("/");
-   // Handle successful response here (e.g., redirect to another page)
+    // Handle successful response here (e.g., redirect to another page)
 }).catch((err)=>{
   console.log(err);
 
