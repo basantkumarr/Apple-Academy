@@ -9,7 +9,7 @@ const app=express();
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb://localhost:27017/user");
+mongoose.connect("mongodb+srv://basantkumarweb:753dzH2WQKLGJKeC@db-apple.zk1gplu.mongodb.net/?retryWrites=true&w=majority&appName=db-apple/user");
  
 app.post("/contact",(req,res)=>{
     contactModel.create(req.body)
