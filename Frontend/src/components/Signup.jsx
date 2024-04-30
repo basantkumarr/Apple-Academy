@@ -12,7 +12,7 @@ function Signup() {
     const handlesubmit = (e) => {
         e.preventDefault();
       
-axios.post("apple-academy.vercel.app/sign", {          name,
+axios.post("https://apple-classes.vercel.app/sign", {          name,
           email,
           password
         })
