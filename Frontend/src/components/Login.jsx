@@ -4,6 +4,7 @@ import axios from "axios";
 
 const Login = () => {
   const [email, setEmail] = useState("");
+axios.defaults.withCredentials = true;
 
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -12,8 +13,7 @@ const Login = () => {
   const handlesubmit = (e) => {
     e.preventDefault();
 
-    axios
-.post("apple-academy.vercel.app/login", {        email,
+    axios.post("apple-academy.vercel.app/login", {        email,
         password,
       })
       .then((result) => {
