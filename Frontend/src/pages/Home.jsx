@@ -121,7 +121,9 @@ const Home = () => {
           Discover the perfect program
         </h1>
         <div className="flex flex-row my-8 md:flex-row gap-3 flex-wrap pt-4 md:pt-6">
-          <div
+                <Link to="/exam"> 
+
+         <div
             data-testid="card"
             style={{
               backgroundImage:
@@ -222,6 +224,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+                 </Link>
         </div>
   
       </div>
