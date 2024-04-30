@@ -7,7 +7,13 @@ const contactModel=require("./models/contact")
 const app=express();
 
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+ {
+  origin:[""],
+  method:["POST","GET"],
+  credentials:true
+ }
+));
 
 mongoose.connect("mongodb+srv://basantkumarweb:753dzH2WQKLGJKeC@db-apple.zk1gplu.mongodb.net/?retryWrites=true&w=majority&appName=db-apple/user");
  
