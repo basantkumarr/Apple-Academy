@@ -6,11 +6,13 @@ function Signup() {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [name,setName]=useState("");
+ axios.defaults.withCredentials = true;
+
     const navigate=useNavigate();
     const handlesubmit = (e) => {
         e.preventDefault();
       
-.post("apple-academy.vercel.app/sign", {          name,
+axios.post("apple-academy.vercel.app/sign", {          name,
           email,
           password
         })
