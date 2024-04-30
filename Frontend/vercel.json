@@ -2,8 +2,8 @@
 
 "routes":[
 {
-"src": "/(.*)",
+"src": "/contact",
 "dest": "/"
-}
+},
 ]
 }
