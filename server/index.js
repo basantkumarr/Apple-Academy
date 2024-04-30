@@ -66,6 +66,10 @@ app.post("/login", async (req, res) => {
 app.post("/sign", async (req, res) => {
   try {
     const user = await UserModel.create(req.body);
+    // Include CORS headers in the response
+    res.setHeader("Access-Control-Allow-Origin", "https://apple-classes.vercel.app");
+    res.setHeader("Access-Control-Allow-Methods", "POST");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     res.json(user);
   } catch (error) {
     res.status(500).json({ error: "Failed to register user" });
