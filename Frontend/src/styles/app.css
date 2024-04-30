@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background: #0f1825;
+}
+
+
+.sticky-top {
+  position: fixed;
+  bottom: 0;
+ 
+  z-index: 1000; /* Adjust z-index as needed */
+}
+
+/* Default styles */
+ 
+  /* Media query for screens smaller than 600px */
+  @media screen and (max-width: 400px) {
+    .all{
+      padding-left: 28px;
+     padding-right: 28px;
+    
+      padding-top: 1rem;
+     padding-bottom: 1rem;
+      }
+   .logo{
+    width: 170px;
+    height: auto;
+   } 
+   
+     
+  }
+  
+  /* Media query for screens between 600px and 900px */
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  
+  /* Media query for screens larger than 900px */
+  @media screen and (min-width: 900px) {
+   
+ .all{
+   padding-left: 128px;
+  padding-right: 128px;
+ 
+   padding-top: 1rem;
+  padding-bottom: 1rem;
+   }
+  }
