@@ -121,10 +121,9 @@ const Home = () => {
           Discover the perfect program
         </h1>
         <div className="flex flex-row my-8 md:flex-row gap-3 flex-wrap pt-4 md:pt-6">
-                <Link to="/exam"> 
-
+ 
          <div
-            data-testid="card"
+            data-testid="exam"
             style={{
               backgroundImage:
                 "url(https://res.cloudinary.com/dpzpn3dkw/image/upload/v1707131200/2_2_jee_vwis6e.webp)",
@@ -169,7 +168,7 @@ const Home = () => {
               <div
                  className="text-primary text-base font-semibold md:text-2xl md:font-medium"
               >
-                <Link to="/xy"> AirForce XY </Link>{" "}
+                <Link to="/exam"> AirForce XY </Link>{" "}
               </div>
             </div>
             <div
@@ -203,7 +202,7 @@ const Home = () => {
               data-testid="Grade 6-10"
               className="text-primary text-base font-semibold md:text-2xl md:font-medium"
             >
-              <Link to="/nda"> NDA </Link>{" "}
+              <Link to="/exam"> NDA </Link>{" "}
             </div>
           </div>
           <div
