@@ -3,7 +3,7 @@ import Teatimonils from "../components/Teatimonils";
 import cont from "../assets/contact.png";
 import axios from "axios";
 import { useState  } from "react";
-import { useNavigate} from "react-router-dom";
+ import { useNavigate } from 'react-router-dom'
 
 
 const Contact = () => {
