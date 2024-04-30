@@ -1,61 +1,74 @@
-const express=require("express");
-const mongoose=require("mongoose")
-const cors=require("cors")
-const UserModel=require("./models/user")
-const contactModel=require("./models/contact")
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const UserModel = require("./models/user");
+const ContactModel = require("./models/contact");
 
-const app=express();
+const app = express();
 
-app.use(express.json())
-app.use(cors(
- {
-  origin:["https://apple-classes.vercel.app"],
-  method:["POST","GET"],
-  credentials:true
- }
-));
-app.use(express.json())
+// Middleware
+app.use(express.json());
+app.use(cors({
+  origin: ["https://apple-classes.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
 
-mongoose.connect("mongodb+srv://basantkumarweb:753dzH2WQKLGJKeC@db-apple.zk1gplu.mongodb.net/?retryWrites=true&w=majority&appName=db-apple");
+// Database connection
+mongoose.connect("mongodb+srv://basantkumarweb:753dzH2WQKLGJKeC@db-apple.zk1gplu.mongodb.net/?retryWrites=true&w=majority&appName=db-apple", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+}).then(() => {
+  console.log("MongoDB connected");
+}).catch((err) => {
+  console.error("MongoDB connection error:", err);
+});
 
-app.get("/",(req,res)=>{
-  res.send("Server is Running...");
-})
+// Routes
+app.get("/", (req, res) => {
+  res.send("Server is running...");
+});
 
-app.post("/contact",(req,res)=>{
-    contactModel.create(req.body)
-    .then(contacts=>res.json(contacts))
-    .catch(err=> res.json(err))    
-})
-    
+app.post("/contact", async (req, res) => {
+  try {
+    const contact = await ContactModel.create(req.body);
+    res.json(contact);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to submit contact" });
+  }
+});
 
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const user = await UserModel.findOne({ email });
+    if (user) {
+      if (user.password === password) {
+        res.json("success");
+      } else {
+        res.json("Incorrect password");
+      }
+    } else {
+      res.json("User not found");
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Failed to login" });
+  }
+});
 
+app.post("/sign", async (req, res) => {
+  try {
+    const user = await UserModel.create(req.body);
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to register user" });
+  }
+});
 
+// Start server
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
-app.post("/login",(req,res)=>{
-    const{email,password}=req.body;
-    UserModel.findOne({email:email}).then(uesr=>{
-        if(uesr){
-            if(uesr.password===password){
-                res.json("success");
-            }else{
-                res.json("The password is incorrect")
-            }
-
-        }
-        else{
-            res.json("The user does not exist")
-
-        }
-    })
-})
-
-app.post("/sign",(req,res)=>{
-UserModel.create(req.body)
-   .then(users=>res.json(users))
-   .catch(err=> res.json(err))
-})
-
-app.listen(3001,()=>{
-    console.log("server is running")
-})
