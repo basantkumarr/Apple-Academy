@@ -9,7 +9,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-origin: process.env.CLIENT_URL,
+origin:"https://apple-classes.vercel.app",
   optionsSuccessStatus: 200,  
   methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
   credentials: true,
