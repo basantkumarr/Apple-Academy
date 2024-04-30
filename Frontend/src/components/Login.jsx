@@ -15,7 +15,12 @@ axios.defaults.withCredentials = true;
 
     axios.post("https://apple-academy-1.vercel.app/login", {        email,
         password,
-      })
+      },{
+           headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Credentials": true,
+        })
       .then((result) => {
         console.log(result);
         if (result.data === "success") {
