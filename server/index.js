@@ -15,7 +15,7 @@ app.use(cors({
 }));
 
 // Database connection
-mongoose.connect("mongodb+srv://basantkumarweb:753dzH2WQKLGJKeC@db-apple.zk1gplu.mongodb.net/?retryWrites=true&w=majority&appName=db-apple/user", {
+mongoose.connect("mongodb+srv://basantkumarweb:753dzH2WQKLGJKeC@db-apple.zk1gplu.mongodb.net/?retryWrites=true&w=majority&appName=db-apple/test", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true
