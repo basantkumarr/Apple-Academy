@@ -17,7 +17,11 @@ app.use(cors(
 app.use(express.json())
 
 mongoose.connect("mongodb+srv://basantkumarweb:753dzH2WQKLGJKeC@db-apple.zk1gplu.mongodb.net/?retryWrites=true&w=majority&appName=db-apple");
- 
+
+app.get("/",(req,res)=>{
+  res.send("Server is Running...");
+})
+
 app.post("/contact",(req,res)=>{
     contactModel.create(req.body)
     .then(contacts=>res.json(contacts))
