@@ -13,8 +13,7 @@ const Login = () => {
     e.preventDefault();
 
     axios
-      .post(`${window.location.origin}/login`, {
-        email,
+.post("http://localhost:3001/login", {        email,
         password,
       })
       .then((result) => {
