@@ -2,8 +2,8 @@ import no from "../assets/call_main-removebg-preview.png";
 import Teatimonils from "../components/Teatimonils";
 import cont from "../assets/contact.png";
 import axios from "axios";
-import { useState  } from "react";
- 
+import { useState } from "react";
+
 
 const Contact = () => {
 
@@ -13,20 +13,19 @@ const[address,setAddress]=useState("");
 const[mobile,setMobile]=useState("");
 const[goal,setGoal]=useState("");
 const[mode,setMode]=useState("");
- 
-axios.defaults.withCredentials = true;
 
 const handleClick=(e)=>{
   e.preventDefault();
-axios.post("https://apple-academy-1.vercel.app/contact", {name,lastName,address,mobile,goal,mode},{
-           headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-              "Access-Control-Allow-Credentials": true,
-        }
+
+  axios.post("https://apple-academy-1.vercel.app/contact",
+{name,lastName,address,mobile,goal,mode},{headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
+}}
 ).then(result => {
   console.log(result);
-    // Handle successful response here (e.g., redirect to another page)
+   // Handle successful response here (e.g., redirect to another page)
 }).catch((err)=>{
   console.log(err);
 
