@@ -19,7 +19,12 @@ axios.defaults.withCredentials = true;
 
 const handleClick=(e)=>{
   e.preventDefault();
-axios.post("https://apple-academy-1.vercel.app/contact", {name,lastName,address,mobile,goal,mode}
+axios.post("https://apple-academy-1.vercel.app/contact", {name,lastName,address,mobile,goal,mode},{
+           headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Credentials": true,
+        }
 ).then(result => {
   console.log(result);
    navigate("/");
