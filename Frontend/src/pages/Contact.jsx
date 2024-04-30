@@ -40,7 +40,7 @@ const handleClick=(e)=>{
   return (
     <div>
       <div
-        className="all">
+         className="all">
         <div className="rounded btn  py-3  block">
           <img className="my-auto" src={no} alt="" />
         </div>
