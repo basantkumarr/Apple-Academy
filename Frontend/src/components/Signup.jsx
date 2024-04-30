@@ -12,9 +12,16 @@ function Signup() {
     const handlesubmit = (e) => {
         e.preventDefault();
       
-axios.post("https://apple-academy-1.vercel.app/sign", {          name,
+axios.post("https://apple-academy-1.vercel.app/sign", { 
+           name,
           email,
           password
+        },{
+           headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Credentials": true,
+        },
         })
         .then(result => {
           console.log(result);
