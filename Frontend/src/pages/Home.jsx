@@ -123,7 +123,7 @@ const Home = () => {
         <div className="flex flex-row my-8 md:flex-row gap-3 flex-wrap pt-4 md:pt-6">
  
          <div
-            data-testid="exam"
+            data-testid="card"
             style={{
               backgroundImage:
                 "url(https://res.cloudinary.com/dpzpn3dkw/image/upload/v1707131200/2_2_jee_vwis6e.webp)",
@@ -135,7 +135,7 @@ const Home = () => {
                 data-testid="JEE"
                 className="text-primary text-base font-semibold md:text-2xl md:font-medium"
               >
-                <Link to="/grade">Grade 6-12</Link>
+                <Link to="/exam">Grade 6-12</Link>
               </div>
             </div>
             <div
