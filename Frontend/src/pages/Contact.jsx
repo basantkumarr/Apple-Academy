@@ -2,7 +2,7 @@ import no from "../assets/call_main-removebg-preview.png";
 import Teatimonils from "../components/Teatimonils";
 import cont from "../assets/contact.png";
 import axios from "axios";
-import { useState } from "react";
+import { useState , useNavigate } from "react";
 
 
 const Contact = () => {
@@ -13,6 +13,8 @@ const[address,setAddress]=useState("");
 const[mobile,setMobile]=useState("");
 const[goal,setGoal]=useState("");
 const[mode,setMode]=useState("");
+    const navigate = useNavigate();
+
 axios.defaults.withCredentials = true;
 
 const handleClick=(e)=>{
@@ -20,6 +22,7 @@ const handleClick=(e)=>{
 axios.post("apple-academy.vercel.app/contact", {name,lastName,address,mobile,goal,mode}
 ).then(result => {
   console.log(result);
+   navigate("/");
    // Handle successful response here (e.g., redirect to another page)
 }).catch((err)=>{
   console.log(err);
