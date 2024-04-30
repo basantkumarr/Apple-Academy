@@ -9,9 +9,11 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: ["https://apple-classes.vercel.app"],
-  methods: ["POST", "GET"],
-  credentials: true
+origin: process.env.CLIENT_URL,
+  optionsSuccessStatus: 200,  
+  methods: ["GET,HEAD,PUT,PATCH,POST,DELETE"],
+  credentials: true,
+  preflightContinue: false,
 }));
 
 // Database connection
