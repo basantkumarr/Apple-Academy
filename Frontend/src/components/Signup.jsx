@@ -10,7 +10,7 @@ function Signup() {
     const handlesubmit = (e) => {
         e.preventDefault();
       
-.post("http://localhost:3001/sign", {          name,
+.post("apple-academy.vercel.app/sign", {          name,
           email,
           password
         })
