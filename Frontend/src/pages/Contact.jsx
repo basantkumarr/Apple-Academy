@@ -13,11 +13,11 @@ const[address,setAddress]=useState("");
 const[mobile,setMobile]=useState("");
 const[goal,setGoal]=useState("");
 const[mode,setMode]=useState("");
+axios.defaults.withCredentials = true;
 
 const handleClick=(e)=>{
   e.preventDefault();
-
-.post("apple-academy.vercel.app/contact", {{name,lastName,address,mobile,goal,mode}
+axios.post("apple-academy.vercel.app/contact", {{name,lastName,address,mobile,goal,mode}
 ).then(result => {
   console.log(result);
    // Handle successful response here (e.g., redirect to another page)
