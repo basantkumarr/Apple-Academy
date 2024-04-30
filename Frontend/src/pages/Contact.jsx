@@ -17,7 +17,7 @@ const[mode,setMode]=useState("");
 const handleClick=(e)=>{
   e.preventDefault();
 
-  axios.post("http://localhost:3001/contact",
+  axios.post(`${window.location.origin}/contact`,
 {name,lastName,address,mobile,goal,mode}
 ).then(result => {
   console.log(result);
