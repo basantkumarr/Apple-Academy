@@ -9,7 +9,7 @@ const app=express();
 app.use(express.json())
 app.use(cors(
  {
-  origin:["https://apple-classes.vercel.app/"],
+  origin:["https://apple-classes.vercel.app"],
   method:["POST","GET"],
   credentials:true
  }
