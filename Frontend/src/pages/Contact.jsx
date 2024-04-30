@@ -13,8 +13,7 @@ const[address,setAddress]=useState("");
 const[mobile,setMobile]=useState("");
 const[goal,setGoal]=useState("");
 const[mode,setMode]=useState("");
-    const navigate = useNavigate();
-
+ 
 axios.defaults.withCredentials = true;
 
 const handleClick=(e)=>{
