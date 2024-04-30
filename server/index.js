@@ -28,6 +28,10 @@ mongoose.connect("mongodb+srv://basantkumarweb:753dzH2WQKLGJKeC@db-apple.zk1gplu
 });
 
 // Routes
+app.all('*', (req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "https://localhost:3000");
+    next();
+});
 app.get("/", (req, res) => {
   res.send("Server is running...");
 });
