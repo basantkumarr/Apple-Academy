@@ -19,7 +19,7 @@ axios.defaults.withCredentials = true;
 
 const handleClick=(e)=>{
   e.preventDefault();
-axios.post("https://apple-classes.vercel.app/contact", {name,lastName,address,mobile,goal,mode}
+axios.post("https://apple-academy-1.vercel.app/contact", {name,lastName,address,mobile,goal,mode}
 ).then(result => {
   console.log(result);
    navigate("/");
