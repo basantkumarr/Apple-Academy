@@ -10,7 +10,7 @@ function Signup() {
     const handlesubmit = (e) => {
         e.preventDefault();
       
-        axios.post("http://localhost:3001/sign", {
+        axios.post(`${window.location.origin}/sign`, {
           name,
           email,
           password
