@@ -35,7 +35,9 @@ axios.post("https://apple-academy-1.vercel.app/sign", {
           } else if (err.request) {
              console.error("No response received from the server:", err.request);
           } else {
-    console.error("Error setting up the request:", err.message);
+
+           
+           console.error("Error setting up the request:", err.message);
           }
          });
       }
