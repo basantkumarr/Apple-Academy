@@ -1,41 +1,40 @@
-import no from "../assets/call_main-removebg-preview.png";
-import Teatimonils from "../components/Teatimonils";
-import cont from "../assets/contact.png";
+import React, { useState } from "react";
 import axios from "axios";
-import { useState } from "react";
-
-
+import Teatimonils from "../components/Teatimonils";
+import no from "../assets/call_main-removebg-preview.png";
+import cont from "../assets/contact.png";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [address, setAddress] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [goal, setGoal] = useState("");
+  const [mode, setMode] = useState("");
 
-const[name,setName]=useState("");
-const[lastName,setLastName]=useState("");
-const[address,setAddress]=useState("");
-const[mobile,setMobile]=useState("");
-const[goal,setGoal]=useState("");
-const[mode,setMode]=useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-const handleClick=(e)=>{
-  e.preventDefault();
-
-  axios.post("https://apple-academy-1.vercel.app/contact",
-{name,lastName,address,mobile,goal,mode},{headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Credentials": true,
-},}
-).then(result => {
-  console.log(result);
-   // Handle successful response here (e.g., redirect to another page)
-}).catch((err)=>{
-  console.log(err);
-
-});
-
-
-}
- 
-
+    axios
+      .post(
+        "https://apple-academy-1.vercel.app/contact",
+        { name, lastName, address, mobile, goal, mode },
+        {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Credentials": true,
+          },
+        }
+      )
+      .then((result) => {
+        console.log(result);
+        // Handle successful response here (e.g., redirect to another page)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
 
   return (
