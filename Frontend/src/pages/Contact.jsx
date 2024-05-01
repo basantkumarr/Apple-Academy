@@ -71,7 +71,7 @@ const Contact = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-6 px-6 py-1">
               <div>
-                <form className="row g-3"  onSubmit={handleClick}>
+                <form className="row g-3"  onSubmit={handleSubmit}>
                   <div className="col-md-6">
                     <label   className="form-label text-gray-400">
 First Name                    </label>
@@ -195,7 +195,7 @@ First Name                    </label>
                   className="text-base px-2 py-1 mx-auto my-3 flex items-center flex-row-reverse false rounded-3xl text-primary m-1 border border-borderShade bg-primary-default mt-3 rounded-full text-base font-semibold w-52 flex items-center justify-center py-2 leading-5 bg-inverse text-white transition duration-300 ease-in-out hover:bg-primary-hover focus:bg-primary-focus"
                   data-testid="cta-button"
                   type="submit"
-                  onClick={handleClick}
+                  onClick={handleSubmit}
                 >
                      Submit
                  </button>
