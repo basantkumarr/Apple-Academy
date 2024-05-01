@@ -31,6 +31,9 @@ app.get("/", (req, res) => {
 app.post("/contact", async (req, res) => {
   try {
     const contact = await ContactModel.create(req.body);
+     res.setHeader("Access-Control-Allow-Origin", "https://apple-classes.vercel.app");
+    res.setHeader("Access-Control-Allow-Methods", "POST");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     res.json(contact);
   } catch (error) {
     res.status(500).json({ error: "Failed to submit contact" });
