@@ -63,7 +63,7 @@ const Home = () => {
       </div>
 
       <div className="block ">
-        <h1 className="text-gray-300  font-semibold  pl-1 my-10 text-xxl-end  mx-auto fs-1 ">
+        <h1 className="text-gray-300  font-semibold  pl-1 my-10  mx-auto fs-1 ">
           {" "}
           Our Experienced Faculty
         </h1>
