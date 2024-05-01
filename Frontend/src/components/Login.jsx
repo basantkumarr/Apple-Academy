@@ -37,7 +37,7 @@ axios.defaults.withCredentials = true;
           } else {
     console.error("Error setting up the request:", err.message);
           }
-         });
+         })
       }
 
   return (
