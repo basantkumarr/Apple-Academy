@@ -24,7 +24,7 @@ const Home = () => {
       </div>
       <div className="row flex-lg-row-reverse   align-items-center g-5 py-5">
         <div className="col-10 col-sm-8 col-lg-6">
-         <img  src={img1} width="400" className="ml-8 xxl:ml-32 sm:ml-20"  alt="" />
+         <img  src={img1} width="400" className="ml-8 xxl-ml-32 sm:ml-20"  alt="" />
         </div>
         <div className="col-lg-6 px-8">
           <div className="mb-8">
