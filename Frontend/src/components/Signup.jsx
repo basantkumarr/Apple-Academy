@@ -50,7 +50,7 @@ axios.post("https://apple-academy.vercel.app/sign", {
  
 
          <form action='POST' onSubmit={handlesubmit} className="form-signin  m-auto w-96">
-           <h1 className="h3 mb-3 text-white fw-normal">Please Sign in</h1>
+           <h1 className="h3 mb-3 text-white fw-normal">Please Sign up</h1>
 
           <div className="form-floating mb-2">
             <input type="text" className="form-control" id="floatingInput" name="name" onChange={(e)=>{setName(e.target.value)}} placeholder="Name" />
@@ -71,10 +71,10 @@ axios.post("https://apple-academy.vercel.app/sign", {
               Remember me
             </label>
           </div>
-          <button className="btn btn-primary w-100 py-2" onClick={handlesubmit} type="submit"> Log in </button>
+          <button className="btn btn-primary w-100 py-2" onClick={handlesubmit} type="submit"> Sign Up </button>
     <br />
     <br />
-  <p className='text-white'>OR If Signed up, then <Link to="/login" className='underline text-white'> Go to Sign in Page </Link></p>
+  <p className='text-white'>OR If Signed up, then  Go to <Link to="/login" className='underline text-white'> Log in Page </Link></p>
   
   
 
