@@ -36,9 +36,9 @@ axios.defaults.withCredentials = true;
              console.error("No response received from the server:", err.request);
           } else {
     console.error("Error setting up the request:", err.message);
-          }
-         })
-      }
+       }
+    });
+  };
 
   return (
     <div className=" all mt-6">
