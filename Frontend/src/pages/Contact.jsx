@@ -17,7 +17,7 @@ const Contact = () => {
 
     axios
       .post(
-        "https://apple-academy-1.vercel.app/contact",
+        "https://apple-academy.vercel.app/contact",
         { name, lastName, address, mobile, goal, mode },
         {
           headers: {
