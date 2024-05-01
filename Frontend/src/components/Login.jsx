@@ -15,35 +15,29 @@ axios.defaults.withCredentials = true;
 
     axios.post("https://apple-academy-1.vercel.app/login", {        email,
         password,
-      },{
+        },{
            headers: {
               Accept: "application/json",
               "Content-Type": "application/json",
               "Access-Control-Allow-Credentials": true,
-        },}
-      .then((result) => {
-        console.log(result);
-        if (result.data === "success") {
-          navigate("/");
-        show(true);
-        } 
-
-        // Handle successful response here (e.g., redirect to another page)
-      })
-      .catch((err) => {
-        if (err.response) {
-          console.log(
-            "Server responded with an error status:",
-            err.response.status
-          );
-          console.log("Error response data:", err.response.data);
-        } else if (err.request) {
-          console.error("No response received from the server:", err.request);
-        } else {
-          console.error("Error setting up the request:", err.message);
-        }
-      });
-  };
+        },
+        })
+        .then(result => {
+          console.log(result);
+          navigate("/")
+          // Handle successful response here (e.g., redirect to another page)
+        })
+        .catch(err => {
+          if (err.response) {
+             console.log("Server responded with an error status:", err.response.status);
+            console.log("Error response data:", err.response.data);
+          } else if (err.request) {
+             console.error("No response received from the server:", err.request);
+          } else {
+    console.error("Error setting up the request:", err.message);
+          }
+         });
+      }
 
   return (
     <div className=" all mt-6">
