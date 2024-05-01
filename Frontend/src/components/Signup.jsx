@@ -17,10 +17,10 @@ axios.post("https://apple-academy-1.vercel.app/sign", {
           email,
           password
         },{
-           headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-              "Access-Control-Allow-Credentials": true,
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
         },
         })
         .then(result => {
@@ -40,7 +40,7 @@ axios.post("https://apple-academy-1.vercel.app/sign", {
            console.error("Error setting up the request:", err.message);
           }
          });
-      }
+      };
       
 
   return (
