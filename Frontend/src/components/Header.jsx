@@ -149,10 +149,11 @@ import { useState } from "react";
                   <div className="border-bottom "    onClick={() => setIsOpen(!isOpen)}
 >
                     <Link
+                     
                       to="/exam"
                       onClick={() => {
                         setIsOpen(false); // Close the disclosure panel when a link is clicked
-                      }}                      className="text-gray-200 hover:bg-gray-700   hover:text-white
+                      }}                      className="text-gray-200  hover:text-gray-400 
                               rounded-md px-2 py-1 text-md  font-semibold "
                     >
                           
@@ -165,7 +166,7 @@ import { useState } from "react";
                       to="/about"
                       onClick={() => setIsOpen(!isOpen)}
 
-                      className="text-gray-200 hover:bg-gray-700 hover:text-white
+                      className="text-gray-200  hover:text-gray-400 
                               rounded-md px-2 py-1 text-md  font-semibold "
                     >
                       AboutUs
@@ -177,7 +178,7 @@ import { useState } from "react";
                       to="/live"
                       onClick={() => setIsOpen(!isOpen)}
 
-                      className="text-gray-200 hover:bg-gray-700 hover:text-white
+                      className="text-gray-200  hover:text-gray-400 
                               rounded-md px-2 py-1 text-md  font-semibold "
                     >
                       Live class
