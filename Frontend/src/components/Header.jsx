@@ -184,6 +184,17 @@ import { useState } from "react";
                       Live class
                     </Link>
                   </div>
+                     <div className="border-bottom">
+                    <Link
+                      to="/contact"
+                      onClick={() => setIsOpen(!isOpen)}
+
+                      className="text-gray-200  hover:text-gray-400 
+                              rounded-md px-2 py-1 text-md  font-semibold "
+                    >
+                      Talk to us
+                    </Link>
+                  </div>
                 </div>
               </Disclosure.Panel>
             </>
